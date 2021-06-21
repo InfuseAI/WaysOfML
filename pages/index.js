@@ -24,7 +24,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:url" content="https://waysof.ml" />
         <meta property="og:title" content="Ways of ML" />
-        <meta property="og:image" content="https://waysofml.vercel.app/og.png" />
+        <meta property="og:image" content="https://waysofml.vercel.app/og2.png" />
         <meta property="og:image:width" content="1280" />
         <meta property="og:image:height" content="819" />
         <meta property="og:type" content="article"/>
