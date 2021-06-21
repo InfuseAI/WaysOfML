@@ -1,82 +1,200 @@
-import Head from 'next/head'
+import Head from "next/head";
+import data from "./out.json";
+import stages from "./stages.json";
+import Quote from "./quote";
+import Divider from "./divider";
 
 export default function Home() {
+  let total =
+    data.filter((x) => x[stages[0]] !== "").length *
+    data.filter((x) => x[stages[1]] !== "").length *
+    data.filter((x) => x[stages[2]] !== "").length *
+    data.filter((x) => x[stages[3]] !== "").length;
+  const circles = {
+    "Highly Developed": <span style={{ color: "#8700FF" }}>⬤</span>,
+    "Moderately Developed": <span style={{ color: "#D65CFF" }}>⬤</span>,
+    "Still Developing": <span style={{ color: "#F8D3FE" }}>⬤</span>,
+    "Lightly Developed": <span style={{ color: "#E0E5EB" }}>⬤</span>,
+  };
+
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <div>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta property="og:url" content="https://waysof.ml" />
+        <meta property="og:title" content="Ways of ML" />
+        <meta property="og:image" content="/og.png" />
       </Head>
 
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
+      <main
+        className="flex flex-col items-center justify-center flex-1 w-full px-20 text-center"
+        style={{ height: "80vh" }}
+      >
+        <h1
+          className="max-w-6xl font-extrabold text-7xl md:text-9xl"
+          style={{ letterSpacing: "-.03em" }}
+        >
+          There's currently <span className="text-blue-500 ">{total}</span> ways
+          of doing ML
         </h1>
-
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="p-3 font-mono text-lg bg-gray-100 rounded-md">
-            pages/index.js
-          </code>
-        </p>
-
-        <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
       </main>
 
-      <footer className="flex items-center justify-center w-full h-24 border-t">
+      <article className="max-w-4xl mx-4 sm:mx-auto">
+        <h2 className="text-2xl font-bold">Machine Learning Lifecycle</h2>
+
+        <ul className="my-4">
+          <li className="block mr-4 sm:inline-block">
+            <span style={{ color: "#8700FF" }}>⬤</span> Highly Developed
+          </li>
+          <li className="block mr-4 sm:inline-block">
+            <span style={{ color: "#D65CFF" }}>⬤</span> Moderately Developed
+          </li>
+          <li className="block mr-4 sm:inline-block">
+            <span style={{ color: "#F8D3FE" }}>⬤</span> Still Developing
+          </li>
+          <li className="block sm:inline-block">
+            <span style={{ color: "#E0E5EB" }}>⬤</span> Lightly Developed
+          </li>
+        </ul>
+
+        <ul className="my-4 text-sm text-right text-gray-500 sm:hidden">
+          <li className="block">1. Data Gathering, Transformation</li>
+          <li className="block">
+            2. Experimenting, Training, Tuning, Testing
+          </li>
+          <li className="block">
+            3. Productionization, Deployment, Inference
+          </li>
+          <li className="block">
+            4. Monitoring, Auditing, Management, Retraining
+          </li>
+        </ul>
+
+        <table className="mt-12 table-fixed">
+          <thead>
+            <tr className="text-normal">
+              <th className="w-1/5 text-left"></th>
+              <th className="w-1/5">
+                <span className="hidden sm:block">
+                  1. Data Gathering, Transformation
+                </span>
+                <span className="block sm:hidden">1.</span>
+              </th>
+              <th className="w-1/5">
+                <span className="hidden sm:block">
+                  2. Experimenting, Training, Tuning, Testing
+                </span>
+                <span className="block sm:hidden">2.</span>
+              </th>
+              <th className="w-1/5">
+                <span className="hidden sm:block">
+                  3. Productionization, Deployment, Inference
+                </span>
+                <span className="block sm:hidden">3.</span>
+              </th>
+              <th className="w-1/5">
+                <span className="hidden sm:block">
+                  4. Monitoring, Auditing, Management, Retraining
+                </span>
+                <span className="block sm:hidden">4.</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {data.map((x, i) => {
+              return (
+                <tr key={i} className="text-center border-b border-gray-200">
+                  <td className="py-4">
+                    <a
+                      className="underline hover:text-blue-400"
+                      href={x.Website}
+                    >
+                      {x.Name}
+                    </a>
+                  </td>
+                  <td className="relative">
+                    {
+                      circles[
+                        x["Life Cycle - Data Gathering and Transformation"]
+                      ]
+                    }
+                  </td>
+                  <td>
+                    {
+                      circles[
+                        x[
+                          "Life Cycle - Experimenting, Training, Tuning, Testing"
+                        ]
+                      ]
+                    }
+                  </td>
+                  <td>
+                    {
+                      circles[
+                        x[
+                          "Life Cycle - Monitoring, Auditing, Management, Retraining"
+                        ]
+                      ]
+                    }
+                  </td>
+                  <td>
+                    {
+                      circles[
+                        x[
+                          "Life Cycle - Productionization, Deployment, Inference"
+                        ]
+                      ]
+                    }
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </article>
+
+      <Quote className="mx-4 sm:mx-auto" />
+
+      <Divider />
+
+      <article className="max-w-4xl mx-4 text-center sm:mx-auto">
+        <h3 className="text-xl font-bold">
+          <a
+            className="hover:underline hover:text-blue-400"
+            href="https://towardsdatascience.com/rise-of-the-canonical-stack-in-machine-learning-724e7d2faa75"
+          >
+            Rise of the Canonical Stack in Machine Learning
+          </a>
+        </h3>
+        <div className="text-gray-500">
+          How a Dominant New Software Stack Will Unlock the Next Generation of
+          Cutting Edge AI Apps
+        </div>
+
+        <h3 className="mt-24 text-xl font-bold text-blue-500">
+          <a
+            className="hover:underline hover:text-blue-400"
+            href="mailto:poga@infuseai.io"
+          >
+            Share your MLOps tools with us!
+          </a>
+        </h3>
+      </article>
+
+      <Divider />
+
+      <footer className="flex items-center justify-center w-full h-24 mt-24">
         <a
           className="flex items-center justify-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href="https://infuseai.io"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
+          Powered by{" "}
+          <img src="logo.svg" alt="InfuseAI Logo" className="h-6 ml-2" />
         </a>
       </footer>
     </div>
-  )
+  );
 }
