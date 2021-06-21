@@ -25,6 +25,8 @@ export default function Home() {
         <meta property="og:url" content="https://waysof.ml" />
         <meta property="og:title" content="Ways of ML" />
         <meta property="og:image" content="https://waysofml.vercel.app/og.png" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:description" content="Powered by InfuseAI" />
       </Head>
 
       <main
