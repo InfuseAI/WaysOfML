@@ -18,8 +18,6 @@ export default function Home() {
     "Lightly Developed": <span style={{ color: "#E0E5EB" }}>⬤</span>,
   };
 
-  console.log(data[0], stages[1], data[0][stages[0]])
-
   return (
     <div>
       <Head>

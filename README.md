@@ -15,3 +15,5 @@ Start dev server with `npm run dev` then `node gen-og-image.js`
 ## Export static website
 
 `npm run build && npm run export`
+
+copy `docs/.nojekyll` and `docs/CNAME` to `out/`
