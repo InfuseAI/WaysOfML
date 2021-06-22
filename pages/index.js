@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Ways of ML</title>
+        <title>{total} Ways of doing ML</title>
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:url" content="https://waysof.ml" />
         <meta property="og:title" content="Ways of ML" />
