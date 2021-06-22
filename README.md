@@ -1,5 +1,9 @@
 # WaysOfML
 
+## Install dependencies
+
+`npm i`
+
 ## Update data
 
 Replace `pages/landscape.csv` with exported csv from airtable. Then run `node parse.js`
