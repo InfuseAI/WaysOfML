@@ -14,4 +14,4 @@ Start dev server with `npm run dev` then `node gen-og-image.js`
 
 ## Export static website
 
-`npm run build && npm run export`
+`npm run build && npm run export -o docs/`
