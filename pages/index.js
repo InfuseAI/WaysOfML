@@ -9,13 +9,16 @@ export default function Home() {
     data.filter((x) => x[stages[0]] !== "").length *
     data.filter((x) => x[stages[1]] !== "").length *
     data.filter((x) => x[stages[2]] !== "").length *
-    data.filter((x) => x[stages[3]] !== "").length;
+    data.filter((x) => x[stages[3]] !== "").length *
+    data.filter((x) => x[stages[4]] !== "").length;
   const circles = {
     "Highly Developed": <span style={{ color: "#8700FF" }}>⬤</span>,
     "Moderately Developed": <span style={{ color: "#D65CFF" }}>⬤</span>,
     "Still Developing": <span style={{ color: "#F8D3FE" }}>⬤</span>,
     "Lightly Developed": <span style={{ color: "#E0E5EB" }}>⬤</span>,
   };
+
+  console.log(data[0], stages[1], data[0][stages[0]])
 
   return (
     <div>
@@ -44,7 +47,7 @@ export default function Home() {
         </h1>
       </main>
 
-      <article className="max-w-4xl mx-4 sm:mx-auto">
+      <article className="max-w-5xl mx-4 sm:mx-auto">
         <h2 className="text-2xl font-bold">Machine Learning Lifecycle</h2>
 
         <ul className="my-4">
@@ -63,6 +66,7 @@ export default function Home() {
         </ul>
 
         <ul className="my-4 text-sm text-right text-gray-500 sm:hidden">
+          <li className="block">0. Resource Management, DL Enablement</li>
           <li className="block">1. Data Gathering, Transformation</li>
           <li className="block">
             2. Experimenting, Training, Tuning, Testing
@@ -78,26 +82,32 @@ export default function Home() {
         <table className="mt-12 table-fixed">
           <thead>
             <tr className="text-normal">
-              <th className="w-1/5 text-left"></th>
-              <th className="w-1/5">
+              <th className="w-1/6 text-left"></th>
+              <th className="w-1/6">
+                <span className="hidden sm:block">
+                  0. Resource Management, DL Enablement
+                </span>
+                <span className="block sm:hidden">0.</span>
+              </th>
+              <th className="w-1/6">
                 <span className="hidden sm:block">
                   1. Data Gathering, Transformation
                 </span>
                 <span className="block sm:hidden">1.</span>
               </th>
-              <th className="w-1/5">
+              <th className="w-1/6">
                 <span className="hidden sm:block">
                   2. Experimenting, Training, Tuning, Testing
                 </span>
                 <span className="block sm:hidden">2.</span>
               </th>
-              <th className="w-1/5">
+              <th className="w-1/6">
                 <span className="hidden sm:block">
                   3. Productionization, Deployment, Inference
                 </span>
                 <span className="block sm:hidden">3.</span>
               </th>
-              <th className="w-1/5">
+              <th className="w-1/6">
                 <span className="hidden sm:block">
                   4. Monitoring, Auditing, Management, Retraining
                 </span>
@@ -117,10 +127,17 @@ export default function Home() {
                       {x.Name}
                     </a>
                   </td>
-                  <td className="relative">
+                  <td>
                     {
                       circles[
-                        x["Life Cycle - Data Gathering and Transformation"]
+                        x[stages[0]]
+                      ]
+                    }
+                  </td>
+                  <td>
+                    {
+                      circles[
+                        x[stages[1]]
                       ]
                     }
                   </td>
@@ -128,7 +145,7 @@ export default function Home() {
                     {
                       circles[
                         x[
-                          "Life Cycle - Experimenting, Training, Tuning, Testing"
+                          stages[2]
                         ]
                       ]
                     }
@@ -137,7 +154,7 @@ export default function Home() {
                     {
                       circles[
                         x[
-                          "Life Cycle - Monitoring, Auditing, Management, Retraining"
+                          stages[3]
                         ]
                       ]
                     }
@@ -146,7 +163,7 @@ export default function Home() {
                     {
                       circles[
                         x[
-                          "Life Cycle - Productionization, Deployment, Inference"
+                          stages[4]
                         ]
                       ]
                     }

@@ -2,7 +2,7 @@
 
 ## Install dependencies
 
-`npm i`
+  `npm i`
 
 ## Update data
 
