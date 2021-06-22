@@ -195,7 +195,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{" "}
+          <span>Powered by{" "}</span>
           <img src="logo.svg" alt="InfuseAI Logo" className="h-6 ml-2" />
         </a>
       </footer>
