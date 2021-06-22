@@ -32,6 +32,16 @@ export default function Home() {
         <meta property="og:image:height" content="819" />
         <meta property="og:type" content="article"/>
         <meta property="og:description" content="Powered by InfuseAI" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-H12L752V4V"></script>
+        <script dangerouslySetInnerHTML={{
+          __html: `window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-H12L752V4V');
+          `
+        }}>
+        </script>
       </Head>
 
       <main
