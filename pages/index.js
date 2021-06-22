@@ -42,7 +42,7 @@ export default function Home() {
           className="max-w-6xl font-extrabold text-7xl md:text-9xl"
           style={{ letterSpacing: "-.03em" }}
         >
-          There's currently <span className="text-blue-500 ">{total}</span> ways
+          There're currently <span className="text-blue-500 ">{total}</span> ways
           of doing ML
         </h1>
       </main>
