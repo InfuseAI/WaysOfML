@@ -7,7 +7,7 @@ const Screenshot = async () => {             // Define Screenshot function
   await page.setViewport({width: 1280, height: 1024})
   await page.goto(url);                      // Go website
   await page.screenshot({
-    path: 'public/og2.png',
+    path: 'public/og3.png',
     clip: {
       x: 0,
       y: 0,
