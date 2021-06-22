@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Create Next App</title>
+        <title>Ways of ML</title>
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:url" content="https://waysof.ml" />
         <meta property="og:title" content="Ways of ML" />
@@ -195,7 +195,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <span>Powered by{" "}</span>
+          <span className="block w-24">Powered by{" "}</span>
           <img src="logo.svg" alt="InfuseAI Logo" className="h-6 ml-2" />
         </a>
       </footer>
