@@ -218,7 +218,6 @@ export default function Home() {
           className="flex items-center justify-center"
           href="https://infuseai.io"
           target="_blank"
-          rel="noopener noreferrer"
         >
           <span className="block w-24">Powered by{" "}</span>
           <img src="logo.svg" alt="InfuseAI Logo" className="h-6 ml-2" />
