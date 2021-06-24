@@ -18,7 +18,7 @@ export default function Home() {
     "Lightly Developed": <span style={{ color: "#E0E5EB" }}>⬤</span>,
   };
 
-  return (
+    return (
     <div>
       <Head>
         <title>{total} Ways of doing ML</title>

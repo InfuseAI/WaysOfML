@@ -7,6 +7,7 @@ parse(input, {columns: true, bom: true}, (err, out) => {
   fs.writeFileSync('./pages/out.json', JSON.stringify(
     out
     .filter(x => x.Name !== '')
-    .filter(x => x[stages[0]] !== '' || x[stages[1]] !== '' || x[stages[2]] !== '' || x[stages[3]] !== ''))
+    .filter(x => x[stages[0]] !== '' || x[stages[1]] !== '' || x[stages[2]] !== '' || x[stages[3]] !== '')
+    .sort((x, y) => x.Name.localeCompare(y.Name)))
   )
 })
