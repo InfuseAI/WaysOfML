@@ -40,6 +40,7 @@ export default function Home() {
           `
         }}>
         </script>
+        <script defer data-domain="waysof.ml" src="https://plausible.io/js/plausible.js"></script>
       </Head>
 
       <main
