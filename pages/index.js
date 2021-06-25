@@ -4,7 +4,7 @@ import stages from "./stages.json";
 import Quote from "./quote";
 import Divider from "./divider";
 
-export default function Home() {
+export default function Home () {
   let total =
     data.filter((x) => x[stages[0]] !== "").length *
     data.filter((x) => x[stages[1]] !== "").length *
@@ -12,13 +12,13 @@ export default function Home() {
     data.filter((x) => x[stages[3]] !== "").length *
     data.filter((x) => x[stages[4]] !== "").length;
   const circles = {
-    "Highly Developed": <span style={{ color: "#8700FF" }}>⬤</span>,
-    "Moderately Developed": <span style={{ color: "#D65CFF" }}>⬤</span>,
-    "Still Developing": <span style={{ color: "#F8D3FE" }}>⬤</span>,
-    "Lightly Developed": <span style={{ color: "#E0E5EB" }}>⬤</span>,
+    "Highly Developed": <span style={{color: "#8700FF"}}>⬤</span>,
+    "Moderately Developed": <span style={{color: "#D65CFF"}}>⬤</span>,
+    "Still Developing": <span style={{color: "#F8D3FE"}}>⬤</span>,
+    "Lightly Developed": <span style={{color: "#E0E5EB"}}>⬤</span>,
   };
 
-    return (
+  return (
     <div>
       <Head>
         <title>{total} Ways of doing ML</title>
@@ -28,7 +28,7 @@ export default function Home() {
         <meta property="og:image" content="https://waysofml.vercel.app/og3.png" />
         <meta property="og:image:width" content="1280" />
         <meta property="og:image:height" content="819" />
-        <meta property="og:type" content="article"/>
+        <meta property="og:type" content="article" />
         <meta property="og:description" content="Powered by InfuseAI" />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-H12L752V4V"></script>
         <script dangerouslySetInnerHTML={{
@@ -40,16 +40,16 @@ export default function Home() {
           `
         }}>
         </script>
-        <script defer data-domain="waysof.ml" src="https://plausible.io/js/plausible.js"></script>
+        <script defer data-domain="waysof.ml" src="https://plausible.io/js/plausible.outbound-links.js"></script>
       </Head>
 
       <main
         className="flex flex-col items-center justify-center flex-1 w-full px-20 text-center"
-        style={{ height: "80vh" }}
+        style={{height: "80vh"}}
       >
         <h1
           className="max-w-6xl font-extrabold text-7xl md:text-9xl"
-          style={{ letterSpacing: "-.03em" }}
+          style={{letterSpacing: "-.03em"}}
         >
           There's currently <span className="text-blue-500 ">{total}</span> ways
           of doing ML
@@ -61,16 +61,16 @@ export default function Home() {
 
         <ul className="my-4">
           <li className="block mr-4 sm:inline-block">
-            <span style={{ color: "#8700FF" }}>⬤</span> Highly Developed
+            <span style={{color: "#8700FF"}}>⬤</span> Highly Developed
           </li>
           <li className="block mr-4 sm:inline-block">
-            <span style={{ color: "#D65CFF" }}>⬤</span> Moderately Developed
+            <span style={{color: "#D65CFF"}}>⬤</span> Moderately Developed
           </li>
           <li className="block mr-4 sm:inline-block">
-            <span style={{ color: "#F8D3FE" }}>⬤</span> Still Developing
+            <span style={{color: "#F8D3FE"}}>⬤</span> Still Developing
           </li>
           <li className="block sm:inline-block">
-            <span style={{ color: "#E0E5EB" }}>⬤</span> Lightly Developed
+            <span style={{color: "#E0E5EB"}}>⬤</span> Lightly Developed
           </li>
         </ul>
 
@@ -139,41 +139,41 @@ export default function Home() {
                   <td>
                     {
                       circles[
-                        x[stages[0]]
+                      x[stages[0]]
                       ]
                     }
                   </td>
                   <td>
                     {
                       circles[
-                        x[stages[1]]
+                      x[stages[1]]
                       ]
                     }
                   </td>
                   <td>
                     {
                       circles[
-                        x[
-                          stages[2]
-                        ]
+                      x[
+                      stages[2]
+                      ]
                       ]
                     }
                   </td>
                   <td>
                     {
                       circles[
-                        x[
-                          stages[3]
-                        ]
+                      x[
+                      stages[3]
+                      ]
                       ]
                     }
                   </td>
                   <td>
                     {
                       circles[
-                        x[
-                          stages[4]
-                        ]
+                      x[
+                      stages[4]
+                      ]
                       ]
                     }
                   </td>
