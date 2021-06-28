@@ -1,7 +1,12 @@
-import 'tailwindcss/tailwind.css'
+import 'tailwindcss/tailwind.css';
+import GoogleTagManager from '../components/GoogleTagManager';
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <GoogleTagManager>
+      <Component {...pageProps} />
+    </GoogleTagManager>
+  );
 }
 
 export default MyApp

@@ -1,8 +1,8 @@
 import Head from "next/head";
-import data from "./out.json";
-import stages from "./stages.json";
-import Quote from "./quote";
-import Divider from "./divider";
+import data from "../data/out.json";
+import stages from "../data/stages.json";
+import Quote from "../components/Quote";
+import Divider from "../components/Divider";
 
 export default function Home () {
   let total =
@@ -22,25 +22,6 @@ export default function Home () {
     <div>
       <Head>
         <title>{total} Ways of doing ML</title>
-        <link rel="icon" href="/favicon.ico" />
-        <meta property="og:url" content="https://waysof.ml" />
-        <meta property="og:title" content="Ways of ML" />
-        <meta property="og:image" content="https://waysofml.vercel.app/og3.png" />
-        <meta property="og:image:width" content="1280" />
-        <meta property="og:image:height" content="819" />
-        <meta property="og:type" content="article" />
-        <meta property="og:description" content="Powered by InfuseAI" />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-H12L752V4V"></script>
-        <script dangerouslySetInnerHTML={{
-          __html: `window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-H12L752V4V');
-          `
-        }}>
-        </script>
-        <script defer data-domain="waysof.ml" src="https://plausible.io/js/plausible.outbound-links.js"></script>
       </Head>
 
       <main
