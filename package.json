@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "export": "next export",
-    "ghpages": "npm run build && npm run export && cp docs/.nojekyll out/ && cp docs/CNAME out/ && rm -rf docs && mv out docs"
+    "ghpages": "npm run build && npm run export && mv out docs"
   },
   "dependencies": {
     "csv-parse": "^4.16.0",
