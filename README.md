@@ -1,5 +1,7 @@
 # WaysOfML
 
+<img src="./public/og2.png" width="80%" alt="Ways Of ML" />
+
 ## Install dependencies
 
 ```sh
@@ -16,7 +18,11 @@ Start dev server with `npm run dev` then `node ./lib/gen-og-image.js`
 
 ## Environment
 
-To add GA id, run `cp .env.local.example .env.local` and fill up the GA id.
+To add GA id, run below command and fill up the GA id
+
+```sh
+$cp .env.local.example .env.local
+```
 
 ## Export static website
 
