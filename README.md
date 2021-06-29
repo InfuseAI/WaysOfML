@@ -1,6 +1,6 @@
 # WaysOfML
 
-<img src="./public/og2.png" width="80%" alt="Ways Of ML" />
+![Ways Of ML](./public/og2.png)
 
 ## Install dependencies
 
