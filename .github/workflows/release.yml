@@ -37,10 +37,10 @@ jobs:
       - name: Build
         run: npm run ghpages
 
-      - name: Add nojeklly, CNAME
+      - name: Add .nojekyll, CNAME
         run: |
           cd docs
-          touch .nojeklly
+          touch .nojekyll
           echo 'waysof.ml' > CNAME
 
       - name: Deploy
