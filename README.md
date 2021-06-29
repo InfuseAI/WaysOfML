@@ -21,7 +21,7 @@ Start dev server with `npm run dev` then `node ./lib/gen-og-image.js`
 To add GA id, run below command and fill up the GA id
 
 ```sh
-$cp .env.local.example .env.local
+$ cp .env.local.example .env.local
 ```
 
 ## Export static website
