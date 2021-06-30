@@ -39,7 +39,7 @@ export default class MyDocument extends Document {
             defer
             data-domain="waysof.ml"
             src="https://plausible.io/js/plausible.outbound-links.js"
-          ></script>
+          />
         </Head>
 
         <body>

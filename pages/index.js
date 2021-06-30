@@ -3,6 +3,7 @@ import data from "../data/out.json";
 import stages from "../data/stages.json";
 import Quote from "../components/Quote";
 import Divider from "../components/Divider";
+import { event as sendEvent } from '../lib/gtag';
 
 export default function Home () {
   let total =
@@ -112,7 +113,14 @@ export default function Home () {
                   <td className="py-4">
                     <a
                       className="underline hover:text-blue-400"
+                      target="_blank"
+                      rel="noopener"
                       href={x.Website}
+                      onClick={() => sendEvent({
+                        action: 'click',
+                        category: 'outbound',
+                        label: x.Website,
+                      })}
                     >
                       {x.Name}
                     </a>
@@ -173,6 +181,8 @@ export default function Home () {
         <h3 className="text-xl font-bold">
           <a
             className="hover:underline hover:text-blue-400"
+            target="_blank"
+            rel="noopener"
             href="https://towardsdatascience.com/rise-of-the-canonical-stack-in-machine-learning-724e7d2faa75"
           >
             Rise of the Canonical Stack in Machine Learning
