@@ -37,6 +37,10 @@ export default function Home () {
         </h1>
       </main>
 
+      <Quote className="mx-4 sm:mx-auto" />
+
+      <Divider />
+
       <article className="max-w-5xl mx-4 sm:mx-auto">
         <h2 className="text-2xl font-bold">Machine Learning Lifecycle</h2>
 
@@ -93,13 +97,13 @@ export default function Home () {
               </th>
               <th className="w-1/6">
                 <span className="hidden sm:block">
-                  3. Productionization, Deployment, Inference
+                  3. Monitoring, Auditing, Management, Retraining
                 </span>
                 <span className="block sm:hidden">3.</span>
               </th>
               <th className="w-1/6">
                 <span className="hidden sm:block">
-                  4. Monitoring, Auditing, Management, Retraining
+                  4. Productionization, Deployment, Inference
                 </span>
                 <span className="block sm:hidden">4.</span>
               </th>
@@ -164,8 +168,6 @@ export default function Home () {
           </tbody>
         </table>
       </article>
-
-      <Quote className="mx-4 sm:mx-auto" />
 
       <Divider />
 

@@ -1,16 +1,16 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Document, {Html, Head, Main, NextScript} from 'next/document';
 
-import { GA_TRACKING_ID } from '../lib/gtag';
+import {GA_TRACKING_ID} from '../lib/gtag';
 
 export default class MyDocument extends Document {
-  render() {
+  render () {
     return (
       <Html>
         <Head>
           <link rel="icon" href="/favicon.ico" />
           <meta property="og:url" content="https://waysof.ml" />
           <meta property="og:title" content="Ways of ML" />
-          <meta property="og:image" content="https://waysof.ml/og3.png" />
+          <meta property="og:image" content="https://waysof.ml/og4.png" />
           <meta property="og:image:width" content="1280" />
           <meta property="og:image:height" content="819" />
           <meta property="og:type" content="article" />
