@@ -26,11 +26,10 @@ export default function Home () {
       </Head>
 
       <main
-        className="flex flex-col items-center justify-center flex-1 w-full px-20 text-center"
-        style={{height: "80vh"}}
+        className="flex flex-col items-center justify-center flex-1 w-full px-20 text-center h-full"
       >
         <h1
-          className="max-w-6xl font-extrabold text-7xl md:text-9xl"
+          className="max-w-6xl mt-12 font-extrabold text-7xl md:text-9xl"
           style={{letterSpacing: "-.03em"}}
         >
           There's currently <span className="text-blue-500 ">{total}</span> ways
