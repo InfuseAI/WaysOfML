@@ -26,8 +26,7 @@ export default function Home () {
       </Head>
 
       <main
-        className="flex flex-col items-center justify-center flex-1 w-full px-20 text-center h-full"
-      >
+        className="flex flex-col items-center justify-center flex-1 w-full px-20 text-center h-full mb-20">
         <h1
           className="max-w-6xl mt-12 font-extrabold text-7xl md:text-9xl"
           style={{letterSpacing: "-.03em"}}
@@ -37,7 +36,14 @@ export default function Home () {
         </h1>
       </main>
 
-      <Quote className="mx-4 sm:mx-auto" />
+      <Quote
+        className="mx-4 sm:mx-auto"
+        quote="It takes time for a Canonical Stack to develop in any new field. Before it develops and unleashes a tidal wave of new innovation, it’s often super hard for anyone to see where it’s all going."
+        author="Daniel Jeffries"
+        org="AI Infrastructure Alliance"
+        orgURL="https://ai-infrastructure.org/"
+      />
+
 
       <Divider />
 
@@ -177,11 +183,19 @@ export default function Home () {
       </article>
 
       <Divider />
+      <Quote
+        className="mx-4 sm:mx-auto"
+        quote="End-to-end ML platforms typically take 15–36 months to catch up on feature parity, but the products will launch much sooner than that to create thought leadership and get product feedback."
+        author="Alex Chung"
+        org="Social Good Technologies"
+        orgURL="https://www.socialg.tech/"
+      />
+      <Divider />
 
       <article className="max-w-4xl mx-4 text-center sm:mx-auto">
         <h3 className="text-xl font-bold">
           <a
-            className="hover:underline hover:text-blue-400"
+            className="underline text-blue-500 hover:text-blue-400"
             target="_blank"
             rel="noopener"
             href="https://towardsdatascience.com/rise-of-the-canonical-stack-in-machine-learning-724e7d2faa75"
