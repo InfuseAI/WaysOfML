@@ -208,6 +208,21 @@ export default function Home () {
           Cutting Edge AI Apps
         </div>
 
+        <h3 className="text-xl font-bold mt-20">
+          <a
+            className="underline text-blue-500 hover:text-blue-400"
+            target="_blank"
+            rel="noopener"
+            href="https://towardsdatascience.com/rise-of-the-canonical-stack-in-machine-learning-724e7d2faa75"
+          >
+            Comparing Cloud MLOps platforms, From a former AWS SageMaker PM
+          </a>
+        </h3>
+        <div className="text-gray-500">
+          How do the two big clouds compare today for ML platform tooling?
+          What are the features that matter?
+        </div>
+
         <h3 className="mt-24 text-xl font-bold text-blue-500">
           <a
             className="hover:underline hover:text-blue-400"
