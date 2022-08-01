@@ -226,7 +226,7 @@ export default function Home () {
         <h3 className="mt-24 text-xl font-bold text-blue-500">
           <a
             className="hover:underline hover:text-blue-400"
-            href="mailto:poga@infuseai.io"
+            href="mailto:product@infuseai.io"
           >
             Share your MLOps tools with us!
           </a>
